@@ -1,0 +1,6 @@
+{
+  "name": "Parallel Echo Puzzle",
+  "description": "Unlock levels and solve mind-bending temporal co-op puzzles with parallel recording echoes that mimic your past actions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

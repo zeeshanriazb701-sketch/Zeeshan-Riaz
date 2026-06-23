@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script inline-error-suppressor="true">
+      window.addEventListener('error', function(e) {
+        var msg = e.message || '';
+        var file = e.filename || '';
+        if (msg.indexOf('Script error') > -1 || !file || file.indexOf('extension') > -1 || file.indexOf('google') > -1) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        var reason = e.reason && e.reason.message || '';
+        if (reason.indexOf('Script error') > -1 || !reason) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
